@@ -103,7 +103,7 @@ app.put("/product/:name", async (req, res) => {
 
 mongoose.connect("mongodb+srv://subinsubi_7012:mothalamma@cluster0.sul6tip.mongodb.net/noeds?retryWrites=true&w=majority")
    .then(() => {
-      app.listen(port, '192.168.1.3',() => {
+      app.listen(port,() => {
          console.log('connected at' + port)
       })
    })
