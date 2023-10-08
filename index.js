@@ -9,6 +9,9 @@ const multer = require('multer');
 const app = express();
 const port = 3000;
 
+mongoose.set("strictQuery", false);
+
+
 app.use(express.json())
 
 
@@ -100,6 +103,8 @@ app.put("/product/:name", async (req, res) => {
 
    }
 })
+
+
 
 mongoose.connect("mongodb+srv://subinsubi_7012:mothalamma@cluster0.sul6tip.mongodb.net/noeds?retryWrites=true&w=majority")
    .then(() => {
